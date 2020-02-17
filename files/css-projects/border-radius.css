@@ -1,0 +1,6 @@
+/* -- Border Radius Generator -- */
+.border-radius {
+   display: flex;
+   width: 95%;
+   margin: 10px 2.5%;
+}
