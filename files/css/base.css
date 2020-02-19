@@ -48,3 +48,18 @@
    justify-content: center;
    overflow-y: auto;
 }
+@media (max-width: 760px) {
+   .generator header {
+      width: 95%;
+      height: auto;
+      margin: 0 2.5%;
+      flex-direction: column;
+   }
+   .generator header .title {
+      font-size: 20px;
+   }
+   .generator .container {
+      width: 90%;
+      height: auto;
+   }
+}
