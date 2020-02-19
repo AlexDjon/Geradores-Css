@@ -1,0 +1,16 @@
+<div class='listagem'>
+   <?php 
+      foreach($arquivos as $key => $value) {
+         if($value != 'listagem') {
+            $titulo = explode('Gerador de ',$infos[$value]['titulo'])[1];
+            echo "       
+            <a href='$value'>  
+               <div class='elemento'>                  
+                     $titulo
+               </div>
+            </a>
+            ";
+         }
+      }
+   ?>
+</div>

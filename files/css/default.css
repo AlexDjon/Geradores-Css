@@ -9,7 +9,8 @@
 }
 
 body {
-   background-color: #212121;
+   background-color: #0f0f0f;
+   background-image: url('../img/dark-exa.png');
 }
 
 a {

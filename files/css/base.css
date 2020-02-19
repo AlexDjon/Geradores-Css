@@ -19,9 +19,9 @@
 }
 .generator header .theme-select {
    padding: 5px 8px;
-   background-color: #212121;
+   background-color: #0f0f0f;
    color: #bdbdbd;
-   border: solid 1px #444444;
+   border: solid 2px #3a3a3a;
    border-radius: 6px;
 }
 .generator header .title {
@@ -29,7 +29,7 @@
    font-size: 30px;
    margin-top: 10px;
    font-weight: normal;
-   font-family: 'Tomorrow', sans-serif;
+   font-family: 'Open Sans', sans-serif;
    text-transform: uppercase;
 }
 .generator header .icons a {
@@ -41,6 +41,10 @@
    width: 900px;
    height: 600px;
    margin: 20px 0;
-   /* border: solid #fff 2px;
-   border-color: #3bc579 #3ba5c5 #643bc5 #c53b3b; */
+   background-color: #f1f1f1;
+   color: #171717;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   overflow-y: auto;
 }

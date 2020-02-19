@@ -1,0 +1,38 @@
+/* -- Border Radius Generator -- */
+.border-radius {
+   display: flex;
+   width: 95%;
+   margin: 10px 2.5%;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.border-radius .changer {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.border-radius .changer div input[type=range] {
+   width: 100px;
+   padding: 3px;
+}
+.border-radius .changer div input[type=text],
+.border-radius .changer div select {
+   width: 50px;
+   padding: 3px;
+   border-radius: 2px;
+   background: #383538;
+   color: #f1f1f1;
+   text-transform: lowercase;
+}
+
+/* SHOW */
+.border-radius .show {
+   width: 380px;
+   height: 380px;
+   background-color: #383538;
+   padding: 10px;
+   color: #f1f1f1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
