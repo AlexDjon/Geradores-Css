@@ -36,8 +36,8 @@
    <script src="files/js/script.js"></script>
 
    <!-- Projeto links -->
-   <link rel="stylesheet" href="files/projetos/<?= $gerador ?>/style.css">
-   <script src="files/projetos/<?= $gerador ?>/script.js"></script>
+   <link rel="stylesheet" href="pages/src/<?= $gerador ?>/style.css">
+   <script src="pages/src/<?= $gerador ?>/script.js"></script>
 </head>
 <body>   
    <main class='generator'>

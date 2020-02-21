@@ -20,7 +20,7 @@ class Pasta {
    }
 
    public function infos() {
-      $json = file_get_contents('files/projetos/infos.json');
+      $json = file_get_contents('pages/src/infos.json');
       $decode = json_decode($json, true);
       
       return $decode;
