@@ -39,18 +39,10 @@
    <link rel="stylesheet" href="files/projetos/<?= $gerador ?>/style.css">
    <script src="files/projetos/<?= $gerador ?>/script.js"></script>
 </head>
-<body <?php if($gerador == 'listagem') { echo 'onload="temas(0,\'blue\');"'; } ?>>   
+<body>   
    <main class='generator'>
       <header>
          <select class='theme-select'>
-            <option value='white' selected>White Theme</option>
-            <option value='black'>Dark Theme</option>
-            <option value='blue'>Blue Theme</option>
-            <option value='green'>Green Theme</option>
-            <option value='red'>Red Theme</option>
-            <option value='orange'>Orange Theme</option>
-            <option value='purple'>Purple Theme</option>
-            <option value='yellow'>Yellow Theme</option>
          </select>
          <h3 class='title'> <?= $infos[$gerador]['titulo'] ?> </h3>
          <div class='icons'>

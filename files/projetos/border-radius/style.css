@@ -1,8 +1,8 @@
 /* -- Border Radius Generator -- */
 .border-radius {
    display: flex;
-   width: 95%;
-   margin: 10px 2.5%;
+   width: 90%;
+   margin: 10px 5%;
    flex-wrap: wrap;
    justify-content: center;
 }
@@ -19,10 +19,17 @@
 .border-radius .changer div select {
    width: 50px;
    padding: 3px;
+   text-align: center;
    border-radius: 2px;
    background: #383538;
    color: #f1f1f1;
    text-transform: lowercase;
+}
+.border-radius .changer:nth-child(1) {
+   margin-bottom: 30px;
+}
+.border-radius .changer:last-child {
+   margin-top: 20px;
 }
 
 /* SHOW */
@@ -35,6 +42,9 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 13.5px;
+   font-weight: 400;
 }
 @media (max-width: 760px) {
    .border-radius .changer {

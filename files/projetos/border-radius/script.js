@@ -1,18 +1,85 @@
 function BorderRadius() {
    const obj = {
-      topLeft: 0,
-      topRight: 0,
-      bottomLeft: 0,
-      bottomRight: 0
+      tL: 0,
+      tR: 0,
+      bR: 0,
+      bL: 0
+   }
+
+   this.getValues = id => {
+      const rangeValue = $(`#${id}`).val()
+      const inputValue = $(`#v-${id}`).val()
+      let finalValue = ''
+
+      if(inputValue > 100) {
+         finalValue = inputValue
+      } else {
+         finalValue = rangeValue
+      }
+
+      return {
+         id_r: id,
+         prefix: $(`#p-${id}`).val(),
+         value: finalValue
+      }
+   }
+   
+   this.changeInput = id => {
+      let changer = '';
+
+      // Change range of id = input else change input
+      if(id.length > 2 && id != 'all') {
+         const id_cut = id.substring(2)
+         changer = $(`#v-${id_cut}`).val()
+         $(`#${id_cut}`).val(changer)
+
+         return this.getValues(id_cut)
+
+      } else {
+         changer = $(`#${id}`).val()
+         $(`#v-${id}`).val(changer)
+
+         return this.getValues(id)
+      }
+   }
+
+   this.change = id => {
+      const { prefix, value, id_r } = this.changeInput(id)  
+
+      if(id_r == 'all') {
+         for(let i in obj) {
+            obj[i] = value+prefix
+         }
+      }
+      else {
+         obj[id_r] = value+prefix
+      }
+      
+      this.inner()
+      this.view()
+   }
+
+   this.prepare = () => {
+      const values = Object.values(obj)
+      let prepare = ''
+      if(values.equal()) {
+         prepare = values[0]
+      }
+      else {
+         prepare = values.join(' ')
+      }
+      return prepare
    }
 
    this.create = () => {
+      const medidas = this.prepare()
       return [
-         {name: 'border-radius', value: `${obj.topLeft} ${obj.topRight} ${obj.bottomRight} ${obj.bottomLeft}`},
-         {name: '-moz-border-radius', value: `${obj.topLeft} ${obj.topRight} ${obj.bottomRight} ${obj.bottomLeft}`},
-         {name: '-webkit-border-radius', value: `${obj.topLeft} ${obj.topRight} ${obj.bottomRight} ${obj.bottomLeft}`}
+         {name: 'border-radius', value: medidas },
+         {name: '-moz-border-radius', value: medidas },
+         {name: '-webkit-border-radius', value: medidas }
       ]
    }
+
    this.inner = () => {
       $('.show').html('')
       const r = this.create()
@@ -20,17 +87,7 @@ function BorderRadius() {
          $('.show').append(`${e.name}: ${e.value}; <br>`)
       })
    }
-   this.change = function(val, prefx, id) {
-      if(id == 'all') {
-         for(let i in obj) {
-            obj[i] = val+prefx
-         }
-      }
-      else {
-         obj[id] = val+prefx
-      }
-      this.view()
-   }
+
    this.view = () => {
       const br = this.create()
       br.forEach((e) => {
@@ -41,13 +98,20 @@ function BorderRadius() {
 
 $(document).ready(function() {
    const border = new BorderRadius
+   // Range input
    $('.range').on('input', function() {
       const id = $(this).attr('id')
-      const value = $(this).val()
-      const prefx = $(`#p-${id}`).val()
-      $(`#v-${id}`).val(value)
-      border.change(value, prefx, id)
-      border.inner()
+      border.change(id)
+   })
+   // Text Value
+   $('.textValue').on('change', function() {
+      const id = $(this).attr('id')
+      border.change(id)
+   })
+   // Prefix change
+   $('.prefix').on('change', function() {
+      const id = $(this).attr('id')
+      border.change(id)
    })
 })
 
