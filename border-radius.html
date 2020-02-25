@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Language" content="en, pt-br">
+   <title>Easy Border Radius Generator</title>
+
+   <!-- Meta tags -->
+   <meta name="author" content="Alex Djonata">
+   <meta name="copyright" content="© 2020 Alex Djonata">
+   <meta name="robots" content="index, follow">
+   <meta name="theme-color" content="#222222">   
+   <meta name="description" content="Easily create a border radius">
+   <meta name="keywords" content="border, radius, generator, easy, border radius, gerador de border radius, criar border radius, create border radius, create css, new css, alex djonata, css3, css, javascript, jquery">
+
+   <!-- Links -->
+   <link rel="stylesheet" href="base/css/default.css">
+   <link rel="stylesheet" href="base/css/base.css">
+   <link rel="shortcut icon" href="base/img/favicon.png">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+   <script src="base/js/jquery-3.4.1.min.js"></script>
+   <script src="base/js/jquery.mask.js"></script>
+   <script src="base/js/script.js"></script>
+
+   <!-- Projeto links -->
+   <link rel="stylesheet" href="src/border-radius/style.css">
+   <script src="src/border-radius/script.js"></script>
+</head>
+<body>   
+   <main class='generator'>
+      <header>
+         <select class='theme-select'>
+         </select>
+         <h3 class='title'> Border Radius Generator </h3>
+         <div class='icons'>
+            <a href="https://github.com/AlexDjon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/AlexDjonata" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/alex.djonata.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+         </div>
+      </header>
+      <section class='container'>
+         <div class='border-radius'>
+            <div class="top changer">
+               <div class="left">
+                  <input type="range" min='0' max='100' value='0' id='tL' class='range'><br>
+                  <input type='text' id='v-tL' value='0' class='textValue'>
+                  <select class="prefix" id='p-tL' class='prefix'> </select>
+               </div>
+               
+               <div class="all">
+                  <input type="range" min='0' max='100' value='0' id='all' class='range'><br>
+                  <input type='text' id='v-all' value='0' class='textValue'>
+                  <select class="prefix" id='p-all' class='prefix'> </select>
+               </div>
+         
+               <div class="right">
+                  <input type="range" min='0' max='100' value='0' id='tR' class='range'><br>
+                  <input type='text' id='v-tR' value='0' class='textValue'>
+                  <select class="prefix" id='p-tR' class='prefix'> </select>
+               </div>
+            </div>
+         
+            <div class="show">
+                  border-radius: 0 0 0 0;<br>
+                  -moz-border-radius: 0 0 0 0;<br>
+                  -webkit-border-radius: 0 0 0 0;<br>
+            </div>
+            
+            <div class="bottom changer">      
+               <div class="left">
+                  <input type="range" min='0' max='100' value='0' id='bL' class='range'><br>
+                  <input type='text' id='v-bL' value='0' class='textValue'>
+                  <select class="prefix" id='p-bL' class='prefix'> </select>
+               </div>
+               <div class='home'>
+                  <a href="/GitHub/geradores-css" title='Home'><i class="fas fa-home"></i></a>
+               </div>
+               <div class="right">
+                  <input type="range" min='0' max='100' value='0' id='bR' class='range'><br>
+                  <input type='text' id='v-bR' value='0' class='textValue'>
+                  <select class="prefix" id='p-bR' class='prefix'> </select>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+</body>
+</html>

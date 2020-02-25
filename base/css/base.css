@@ -41,7 +41,7 @@
    width: 900px;
    padding: 20px 0;
    margin: 20px 0;
-   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(60,44,99,1) 27%, rgba(15,15,15,1) 100%);
+   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(60,44,99,1) 0%, rgba(15,15,15,1) 100%);
    color: #171717;
    border-radius: 12px;
    display: flex;
@@ -55,6 +55,9 @@
       margin: 0 2.5%;
       flex-direction: column;
    }
+   .generator header .theme-select {
+      margin-top: 20px;
+   }
    .generator header .title {
       font-size: 20px;
    }
@@ -62,4 +65,47 @@
       width: 90%;
       height: auto;
    }
+}
+
+/* -- Listagem -- */
+.listagem {
+   width: 90%;
+   margin: 20px 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.listagem .elemento {
+   width: 40%;
+   margin: 20px 0;
+   padding: 15px 0;
+   text-align: center;
+   background-color: #212121;
+   border-radius: 3px;
+   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+}
+.listagem .elemento a {
+   font-size: 16px;
+   padding-bottom: 5px;
+   text-transform: uppercase;
+   font-weight: normal;
+   color: #f1f1f1;
+}
+.listagem .elemento h4 {
+   font-size: 14px;
+   font-weight: normal;
+   text-transform: capitalize;
+   color: #d3d3d3;
+}
+
+/*- Home -*/
+.home {
+   margin: 10px 0;
+   text-align: center;
+}
+.home a  {
+   color: #d3d3d3;
+   font-size: 27px;
 }

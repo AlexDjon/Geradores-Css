@@ -94,10 +94,20 @@ function BorderRadius() {
          $('.show').css(e.name, e.value)
       })
    }
+
+   this.addPrefix = () => {
+      const prefix = [ 'px', '%', 'em', 'rem', 'ch' ]
+      for(let v of prefix) {
+         let html = `<option value='${v}'>${v.capitalize()}</option>`
+         $('.prefix').append(html)
+      }
+   }
+
 }
 
 $(document).ready(function() {
    const border = new BorderRadius
+   border.addPrefix()
    // Range input
    $('.range').on('input', function() {
       const id = $(this).attr('id')

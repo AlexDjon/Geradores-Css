@@ -19,7 +19,7 @@ Array.prototype.equal = function() {
 
 function Temas() {
    this.temas = {
-      default: { background: 'radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(60,44,99,1) 27%, rgba(15,15,15,1) 100%)', color: '#d3d3d3' },
+      default: { background: 'radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(60,44,99,1) 0%, rgba(15,15,15,1) 100%)', color: '#d3d3d3' },
       black:   { background: '#0f0f0f', color: '#d3d3d3' },
       white:   { background: '#f1f1f1', color: '#171717' },
       blue:    { background: '#3057c4', color: '#171717' },
