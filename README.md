@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" width="350" src="https://github.com/AlexDjon/geradores-css/blob/master/files/img/favicon.png?raw=true">
+  <img align="center" width="350" src="https://github.com/AlexDjon/geradores-css/blob/master/base/img/favicon.png?raw=true">
 </p>
 
 <p align="center">
