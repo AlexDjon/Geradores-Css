@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="Content-Language" content="en, pt-br">
+   <title>CSS3 - Box Shadow Generator</title>
+
+   <!-- Meta tags -->
+   <meta name="author" content="Alex Djonata">
+   <meta name="copyright" content="© 2020 Alex Djonata">
+   <meta name="robots" content="index, follow">
+   <meta name="theme-color" content="#222222">   
+   <meta name="description" content="Easily create a box shadow">
+   <meta name="keywords" content="box, shadow, generator, easy, border radius, box shadow, gerador de box shadow, criar box shadow, create box shadow, create css, new css, alex djonata, css3, css, javascript, jquery">
+
+   <!-- Links -->
+   <link rel="stylesheet" href="base/css/default.css">
+   <link rel="stylesheet" href="base/css/base.css">
+   <link rel="shortcut icon" href="base/img/favicon.png">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+   <script src="base/js/jquery-3.4.1.min.js"></script>
+   <script src="base/js/jquery.mask.js"></script>
+   <script src="base/js/script.js"></script>
+
+   <!-- Projeto links -->
+   <link rel="stylesheet" href="src/box-shadow/style.css">
+   <script src="src/box-shadow/script.js"></script>
+   <style type='text/css'>
+      .generator .container {
+         background: #f1f1f1;
+      }
+   </style>
+</head>
+<body>   
+   <main class='generator'>
+      <header>
+         <select class='theme-select'>
+         </select>
+         <h3 class='title'> Box Shadow Generator </h3>
+         <div class='icons'>
+            <a href="https://github.com/AlexDjon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/AlexDjonata" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/alex.djonata.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+         </div>
+      </header>
+      <section class='container'>
+         <div class='box-shadow'>
+            <div class="controlls shadow">
+               <label>Horizontal</label>
+               <input 
+                  type='range'
+                  min='-100' 
+                  max='100' 
+                  value='-4' 
+                  id='b-x'>
+               <span id='v-x'>-4px</span>
+               <hr>
+
+               <label>Vertical</label>
+               <input 
+                  type='range' 
+                  min='-100' 
+                  max='100' 
+                  value='-4' 
+                  id='b-y'>
+               <span id='v-y'>-4px</span>
+               <hr>
+
+               <label>Blur</label>
+               <input 
+                  type='range' 
+                  min='0' 
+                  max='300' 
+                  value='9' 
+                  id='b-blur'>
+               <span id='v-blur'>9px</span>
+               <hr>
+
+               <label>Spread</label>
+               <input 
+                  type='range' 
+                  min='-100' 
+                  max='100' 
+                  value='0' 
+                  id='b-spread'>
+               <span id='v-spread'>0px</span>
+               <hr>
+
+               <label>Color</label>
+               <input 
+                  type='color' 
+                  value='#101010' 
+                  id='b-color'>
+               <span id='v-color'>#101010</span>
+            </div>
+
+            <div class="view">
+               <div class='block'>
+                  <p></p>                
+               </div>
+               <div class='home'>
+                  <a href="/" title='Home'>
+                     <i class="fas fa-home" style="color: #222;"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+</body>
+</html>

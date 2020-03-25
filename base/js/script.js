@@ -29,10 +29,10 @@ function Temas() {
       purple:  { background: '#a92cf2', color: '#171717' },
       yellow:  { background: '#f2eb2c', color: '#171717' }
    }
-   this.inSelect = () => {
+   this.inSelect = (defaultTheme = 'default') => {
       const temas = this.temas
       for(let i in temas) {
-         let select = i == 'default' ? ' selected' : ''
+         let select = i == defaultTheme ? ' selected' : ''
          let html = `<option value="${i}"${select}>${i.capitalize()} Theme</option>`
          $('.theme-select').append(html)
       }
@@ -51,7 +51,11 @@ function Temas() {
 
 $(document).ready(function() {
    const tema = new Temas
+   const pathname = window.location.pathname
+   // if(pathname == '/box-shadow' || pathname == '/box-shadow.html') tema.inSelect('white')
+   // if(pathname == '/GitHub/geradores-css/box-shadow.html' || pathname == '/GitHub/geradores-css/box-shadow') tema.inSelect('white')
    tema.inSelect()
+
    $('.theme-select').on('change', function() {
       tema.alterar($(this).val())
    })

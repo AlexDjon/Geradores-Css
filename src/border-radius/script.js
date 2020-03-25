@@ -81,10 +81,10 @@ function BorderRadius() {
    }
 
    this.inner = () => {
-      $('.show').html('')
+      $('.show p').html('')
       const r = this.create()
       r.forEach((e) => {
-         $('.show').append(`${e.name}: ${e.value}; <br>`)
+         $('.show p').append(`${e.name}: ${e.value};<br>`)
       })
    }
 

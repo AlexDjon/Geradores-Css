@@ -46,6 +46,11 @@
    font-size: 13.5px;
    font-weight: 400;
 }
+.border-radius .show p {   
+   font-family: 'Montserrat', sans-serif;
+   font-size: 13.5px;
+   font-weight: 400;
+}
 @media (max-width: 760px) {
    .border-radius .changer {
       flex-direction: row;   
@@ -69,6 +74,8 @@
       margin-top: 15px;
    }
    .border-radius .show {
+      width: 250px;
+      height: 250px;
       margin: 15px 0;
       font-size: 12px;
    }
