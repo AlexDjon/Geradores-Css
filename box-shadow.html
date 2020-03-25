@@ -47,52 +47,70 @@
       <section class='container'>
          <div class='box-shadow'>
             <div class="controlls shadow">
-               <label>Horizontal</label>
-               <input 
-                  type='range'
-                  min='-100' 
-                  max='100' 
-                  value='-4' 
-                  id='b-x'>
-               <span id='v-x'>-4px</span>
+               <div class='elem'>                  
+                  <label>Horizontal</label>
+                  <input 
+                     type='range'
+                     min='-100' 
+                     max='100' 
+                     value='-4' 
+                     id='b-x'>
+                  <span id='v-x'>-4px</span>
+               </div>
+               <div class='elem'>
+                  <label>Vertical</label>
+                  <input 
+                     type='range' 
+                     min='-100' 
+                     max='100' 
+                     value='-4' 
+                     id='b-y'>
+                  <span id='v-y'>-4px</span>
+               </div>
+
                <hr>
 
-               <label>Vertical</label>
-               <input 
-                  type='range' 
-                  min='-100' 
-                  max='100' 
-                  value='-4' 
-                  id='b-y'>
-               <span id='v-y'>-4px</span>
+               <div class='elem'>                  
+                  <label>Blur</label>
+                  <input 
+                     type='range' 
+                     min='0' 
+                     max='300' 
+                     value='9' 
+                     id='b-blur'>
+                  <span id='v-blur'>9px</span>
+               </div>
+               <div class='elem'>
+                  <label>Spread</label>
+                  <input 
+                     type='range' 
+                     min='-100' 
+                     max='100' 
+                     value='0' 
+                     id='b-spread'>
+                  <span id='v-spread'>0px</span>
+               </div>
+               
                <hr>
 
-               <label>Blur</label>
-               <input 
-                  type='range' 
-                  min='0' 
-                  max='300' 
-                  value='9' 
-                  id='b-blur'>
-               <span id='v-blur'>9px</span>
-               <hr>
-
-               <label>Spread</label>
-               <input 
-                  type='range' 
-                  min='-100' 
-                  max='100' 
-                  value='0' 
-                  id='b-spread'>
-               <span id='v-spread'>0px</span>
-               <hr>
-
-               <label>Color</label>
-               <input 
-                  type='color' 
-                  value='#101010' 
-                  id='b-color'>
-               <span id='v-color'>#101010</span>
+               <div class='elem'>
+                  <label>Color</label>
+                  <input 
+                     type='color' 
+                     value='#101010' 
+                     id='b-color'>
+                  <span id='v-color'>rgb(10, 10, 10)</span>                  
+               </div>
+               <div class='elem'>
+                  <label>Opacity</label>
+                  <input 
+                     type='range'
+                     min='0'
+                     max='100'
+                     value='100' 
+                     id='b-opacity'>
+                  <span id='v-opacity'>1</span>                  
+               </div>
             </div>
 
             <div class="view">

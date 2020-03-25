@@ -4,7 +4,12 @@ function BoxShadow() {
      y: -3,
      blur: 5,
      spread: 0,
-     color: '#404040'
+     color: {
+       r: 10,
+       g: 10,
+       b: 10
+     },
+     opacity: 1
   }
 
   this.isMobile = () => {
@@ -16,19 +21,49 @@ function BoxShadow() {
     $('.block p').html(value)
   }
 
+  this.toRGB = hex => {
+    const regex = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i
+    const result = hex.match(regex)
+    console.log(result)
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }
+  
   this.changeValue = elem => {
     const id = elem.id.split('-')[1]
-    const value = elem.value
-    const valueHtml = !isNaN(parseInt(value)) ? `${value}px` : value
+    let value = elem.value
+    let valueHtml = ''
+
+    if(id === 'color') {
+      const rgb = this.toRGB(value)
+      value = {
+        r: rgb.r,
+        g: rgb.g,
+        b: rgb.b
+      }
+      valueHtml = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`
+    }
+    else if (id === 'opacity') {
+      value /= 100
+      valueHtml = value
+    }
+    else {
+      valueHtml = `${value}px`
+    }
 
     $(`#v-${id}`).html(valueHtml)
+
     obj[id] = value
     this.createBox()
   }
 
   this.createBox = () => {
-    const { x, y, blur, spread, color } = obj
-    const valueBox = `${x}px ${y}px ${blur}px ${spread}px ${color}`
+    const { x, y, blur, spread, color, opacity } = obj
+    let rgbaColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`
+    const valueBox = `${x}px ${y}px ${blur}px ${spread}px ${rgbaColor}`
     const props = ['box-shadow', '-webkit-box-shadow', '-moz-box-shadow']
     const mobile = this.isMobile()
 
@@ -40,7 +75,7 @@ function BoxShadow() {
     })
     
 
-    this.render(mobile ? generate[0] : generate.join('<br>'))
+    this.render(generate[0])
   }
 }
 
