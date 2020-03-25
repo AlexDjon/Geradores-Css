@@ -5,7 +5,7 @@
 <p align="center">
   Gerador online de estilos para CSS 3
 </p>
-<blockquote> border-radius: <a href="https://welcometoalex.space/geradores-css/border-radius"> acessar </a> </blockquote>
+<blockquote> border-radius: <a href="https://newcss.space/"> acessar </a> </blockquote>
 
 <hr>
 
